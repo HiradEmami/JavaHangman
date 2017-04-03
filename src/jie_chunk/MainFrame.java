@@ -1490,12 +1490,12 @@ sorter.setSortKeys(sortKeys);
          String word = input;
          String Wlength="";
          String [] all_letters = word.split("");
-         if(all_letters.length <=6){Wlength="short";}else{Wlength="long";}
+         if(all_letters.length <=6){Wlength="short";}else{if(all_letters.length>=10){Wlength="extraLong";}else{Wlength="long";}}
          String swift_code ="\n (w"+word+" isa word value "+input;
          
          for(int i=0; i<=all_letters.length-1;i++)
          {
-             swift_code=swift_code+" letter"+(i+1)+" "+all_letters[i].toUpperCase() ;
+             swift_code=swift_code+" letter"+(i+1)+" L"+all_letters[i].toUpperCase() ;
          }
          swift_code=swift_code+" length "+ Wlength+")";
          
